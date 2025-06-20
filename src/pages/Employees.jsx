@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Typography, Button } from '@mui/material';
-import { RHContext } from '../App';
+import RHContext from '../RHContext';
 import EmployeeTable from '../components/EmployeeTable';
 
 const Employees = () => {

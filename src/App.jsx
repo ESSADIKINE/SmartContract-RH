@@ -8,10 +8,9 @@ import AddEmployee from './pages/AddEmployee';
 import MyInfo from './pages/MyInfo';
 import Web3 from 'web3';
 import './App.css';
-import { RHContext } from './App';
+import RHContext from './RHContext';
 
-// Adresse et ABI du contrat RH (copiés depuis RHContract.json, network 5777)
-const CONTRACT_ADDRESS = '0x5521e386a612621420f58D045CA956504bd434FA';
+const CONTRACT_ADDRESS = '0x5cb971F8FCb8c67274Af0b517fb1Bf07E16368Eb';
 const CONTRACT_ABI = [
   {
     "inputs": [],
@@ -22,17 +21,38 @@ const CONTRACT_ABI = [
     "inputs": [],
     "name": "owner",
     "outputs": [
-      { "internalType": "address", "name": "", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_addr", "type": "address" },
-      { "internalType": "string", "name": "_name", "type": "string" },
-      { "internalType": "string", "name": "_poste", "type": "string" },
-      { "internalType": "uint256", "name": "_salaire", "type": "uint256" }
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_poste",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_salaire",
+        "type": "uint256"
+      }
     ],
     "name": "addEmployee",
     "outputs": [],
@@ -43,12 +63,25 @@ const CONTRACT_ABI = [
     "inputs": [],
     "name": "getMyInfo",
     "outputs": [
-      { "internalType": "string", "name": "", "type": "string" },
-      { "internalType": "string", "name": "", "type": "string" },
-      { "internalType": "uint256", "name": "", "type": "uint256" }
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [],
@@ -56,10 +89,26 @@ const CONTRACT_ABI = [
     "outputs": [
       {
         "components": [
-          { "internalType": "address", "name": "addr", "type": "address" },
-          { "internalType": "string", "name": "name", "type": "string" },
-          { "internalType": "string", "name": "poste", "type": "string" },
-          { "internalType": "uint256", "name": "salaire", "type": "uint256" }
+          {
+            "internalType": "address",
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "poste",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "salaire",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct RHContract.Employee[]",
         "name": "",
@@ -67,12 +116,10 @@ const CONTRACT_ABI = [
       }
     ],
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": true
   }
 ];
-
-// Contexte pour partager web3, le compte, le contrat, le rôle
-export const RHContext = createContext();
 
 function App() {
   const [web3, setWeb3] = useState(null);

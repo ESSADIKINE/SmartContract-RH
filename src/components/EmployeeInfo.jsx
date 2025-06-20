@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Button, Box, Typography, Paper } from '@mui/material';
-import { RHContext } from '../App';
+import RHContext from '../RHContext';
 
 const EmployeeInfo = () => {
   const { contract, account, setAlert } = useContext(RHContext);

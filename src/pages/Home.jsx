@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Typography, Paper, Box, Button } from '@mui/material';
-import { RHContext } from '../App';
+import RHContext from '../RHContext';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {

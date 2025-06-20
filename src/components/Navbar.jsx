@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
-import { RHContext } from '../App';
+import RHContext from '../RHContext';
 
 const Navbar = () => {
   const { account, isOwner } = useContext(RHContext);
