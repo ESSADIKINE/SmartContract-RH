@@ -10,7 +10,7 @@ import Web3 from 'web3';
 import './App.css';
 import RHContext from './RHContext';
 
-const CONTRACT_ADDRESS = '0x5cb971F8FCb8c67274Af0b517fb1Bf07E16368Eb';
+const CONTRACT_ADDRESS = '0x12C9CDA862dDbc1F0D85F4F3b909c9b5Fc44fFe8';
 const CONTRACT_ABI = [
   {
     "inputs": [],
