@@ -1,0 +1,21 @@
+# Node
+node_modules/
+
+# Build React
+/build/
+
+# Truffle
+/build/
+/contracts/*.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env 
